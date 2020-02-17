@@ -89,4 +89,4 @@ es/
 build
 .assets
 .release-meta
-tsconfig.rollup.json
+.package

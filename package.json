@@ -2,24 +2,17 @@
   "name": "ts-lib-example",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "lib/redux.js",
-  "module": "es/redux.js",
-  "types": "types/index.d.ts",
-  "files": [
-    "dist",
-    "lib",
-    "es",
-    "src",
-    "types"
-  ],
+  "private": true,
+  "main": "index.js",
+  "types": "index.d.ts",
   "dependencies": {
     "lodash": "^4.17.15"
   },
   "peerDependencies": {
-    "aws-sdk": "^2.616.0"
+    "aws-sdk": "2.585.0"
   },
   "devDependencies": {
-    "aws-sdk": "^2.616.0",
+    "aws-sdk": "2.585.0",
     "@types/jest": "^25.1.2",
     "@types/node": "^10.17.9",
     "@typescript-eslint/eslint-plugin": "^2.19.2",
@@ -35,24 +28,13 @@
     "eslint-plugin-prettier": "^3.1.2",
     "typescript": "^3.7.5",
     "tslib":"^1.10.0",
-    "rimraf": "^3.0.2",
-    "rollup": "^1.31.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "@rollup/plugin-node-resolve": "^7.1.1",
-    "@rollup/plugin-replace": "^2.3.1",
-    "@rollup/plugin-typescript": "^3.0.0",
-    "rollup-plugin-cleaner":"^1.0.0",
-    "@babel/core": "^7.8.4",
-    "@babel/preset-typescript": "^7.8.3",
-    "@babel/preset-env": "^7.8.4",
-    "builtin-modules":"^3.1.0",
-    "source-map-support":"^0.5.16"
+    "rimraf": "^3.0.2"
   },
   "scripts": {
-    "prepare": "npm run clean && tsc && rollup -c",
-    "lint": "tsc --noEmit && eslint --ignore-path=.prettierignore './**/*.{js,ts,tsx}'",
+    "prepare": "node prepare.js",
+    "lint": "eslint --ignore-path=.prettierignore './**/*.{js,ts,tsx}' && tsc --noEmit",
     "prettier": "prettier --write \"**/**.{ts,js,json}\"",
-    "clean": "rimraf lib dist es coverage types",
+    "clean": "rimraf .package",
     "test": "jest",
     "test:f": "echo || exit 0"
   },

@@ -1,9 +1,8 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "esnext",
+    "target": "ES2018",
+    "module": "CommonJS",
     "declaration": true,
-    "declarationDir": "./types",
     "lib": ["esnext"],
     "strict": false,
     "strictNullChecks": true,
@@ -17,7 +16,8 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "types": ["node", "jest"],
-    "outDir": "./dist"
+    "outDir": "./.package"
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
 }

@@ -1,5 +1,4 @@
-import { f1 } from './f1'
-import { f2 } from './f2'
-import { f3 } from './f3'
+import * as lambda from './lambda'
+import * as stepFunction from './step-function'
 
-export { f1, f2, f3 }
+export { lambda, stepFunction }

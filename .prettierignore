@@ -1,8 +1,4 @@
 package.json
 yarn.lock
 node_modules
-lib
-dist
-es
-types
-rollup.config.js
+.package

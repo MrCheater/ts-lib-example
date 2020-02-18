@@ -32,9 +32,9 @@
   },
   "scripts": {
     "prepare": "node scripts/prepare.js",
-    "lint": "eslint --ignore-path=.prettierignore './**/*.{js,ts,tsx}' && tsc --noEmit",
+    "clear": "node scripts/clear.js",
+    "lint": "eslint --ignore-path=.prettierignore './**/*.{ts,tsx}' && tsc --noEmit",
     "prettier": "prettier --write \"**/**.{ts,js,json}\"",
-    "clean": "rimraf .package",
     "test": "jest",
     "test:f": "echo || exit 0"
   },

@@ -1,1 +1,1 @@
-module.exports = require("./lib/lambda")
+module.exports = require('./lib/lambda')

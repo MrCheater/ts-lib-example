@@ -1,1 +1,1 @@
-module.exports = require("./lib/step-function")
+module.exports = require('./lib/step-function')

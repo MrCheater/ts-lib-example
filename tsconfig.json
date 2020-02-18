@@ -16,8 +16,8 @@
     "resolveJsonModule": true,
     "baseUrl": "./",
     "types": ["node", "jest"],
-    "outDir": "./lib"
+    "outDir": "./"
   },
-  "include": ["./src/**/*"],
+  "include": ["./**/*"],
   "exclude": ["node_modules", "**/*.test.ts"]
 }
